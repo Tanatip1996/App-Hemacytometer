@@ -1,0 +1,12 @@
+<ion-content>
+<div *ngIf="base64Image" > 
+  <img [src]="base64Image">
+</div>
+<div *ngIf="!base64Image">
+      <ion-fab bottom right>
+          <button ion-fab (click)="takePhoto1()">
+            <ion-icon name="camera"></ion-icon>
+          </button>
+      </ion-fab>
+</div>
+</ion-content>

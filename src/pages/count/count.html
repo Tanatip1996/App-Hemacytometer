@@ -1,0 +1,64 @@
+<ion-content padding class="backgroundHome">
+
+  
+    <!-- <ion-slides class="move" autoplay="2000" loop="true" speed="1000">
+        <ion-slide>
+            <button ion-button (click)="getData()">GET DATA</button>
+            <ion-row>Title:{{result.title}}</ion-row>
+            <ion-row>Body:{{result.body}}</ion-row>
+            <ion-row>ID:{{result.id}}</ion-row>
+        </ion-slide>
+        <ion-slide>
+          <img [src]="picture">
+        </ion-slide>
+        <ion-slide>
+          <img src="https://files.differsheet.com/images/user/user8129/diary/c91185b46f16978d98723fc614338300.jpg" >
+        </ion-slide>
+        <ion-slide>
+            <img src="https://i.pinimg.com/736x/05/ee/56/05ee5606e4db8a2d871a7e4cff44acb9.jpg" >
+        </ion-slide>
+        <ion-slide>
+            <img src="https://files.differsheet.com/images/user/user8129/diary/c91185b46f16978d98723fc614338300.jpg" >
+        </ion-slide>
+        
+      </ion-slides> -->
+
+      <ion-card *ngFor="let item of items | async" >
+          <ion-card-header>
+            <ion-slides class="move" autoplay="2000" loop="true" speed="1000">
+              <ion-slide>
+                  <img  [src]="'data:image/png;base64,' + item.imageData">
+                </ion-slide>
+                <ion-slide>
+                    <!-- <a href="http://127.0.0.1:5000/image" >
+                      <img src="'data:image/png;base64', + result.img" >
+                   </a> -->
+                   <img  [src]="'data:image/png;base64,' + item.imageData">
+                </ion-slide>
+              </ion-slides>
+          </ion-card-header>
+          <ion-card-content>
+              <button ion-button (click)="getData()">1</button> 
+               <!-- <button ion-button (click)="getData1()">2</button> -->
+              <ion-item>
+                  <ion-icon name="logo-twitter" color="danger" item-start></ion-icon>
+                  Count with five tables <!-- {{result.title}} -->
+                  <ion-badge item-end>{{result.count}}</ion-badge>
+              </ion-item>
+             
+              <ion-item>
+                  <ion-icon name="musical-notes" color="secondary" item-start></ion-icon>
+                  Calculate with formula <!-- {{result.body}} -->
+                  <ion-badge item-end>{{result.num}}</ion-badge>
+              </ion-item>
+
+              <!-- <ion-row class="Count5Grid">Count with five grids:{{result.title}}</ion-row>
+              <ion-row class="Calculate">Calculate with formula:{{result.body}}</ion-row>
+              <ion-row>ID:{{result.id}}</ion-row> -->
+
+              
+          </ion-card-content>
+        </ion-card>
+  
+  
+</ion-content>

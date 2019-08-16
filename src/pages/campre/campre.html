@@ -1,0 +1,25 @@
+<ion-header>
+    <div class="background-color">
+       
+      <h6 class="ttt"> A Picture Example </h6>
+    </div>
+  </ion-header> 
+    <ion-content padding class = "backgroundHome">
+
+              <ion-card *ngFor="let item of items | async" >      
+                      <img class="imageC" [src]="'data:image/png;base64,' + item.imageData">
+              </ion-card>
+
+      <ion-fab bottom center>
+          <button ion-fab (click)="takePhoto()">
+            <ion-icon name="camera"></ion-icon>
+          </button>
+      </ion-fab>
+      <ion-fab bottom right>
+          <button ion-fab (click)="opencountPage()">
+            <ion-icon name="ios-arrow-dropright-outline"></ion-icon>
+          </button>
+      </ion-fab>
+       
+      </ion-content>
+

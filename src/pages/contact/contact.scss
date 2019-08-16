@@ -1,0 +1,94 @@
+page-contact {
+    .background-color{
+        background:#1A0A3A;
+        overflow: hidden;
+        -webkit-animation:text .7s cubic-bezier(.215,.61,.355,1.000) both;
+        animation:text .7s cubic-bezier(.215,.61,.355,1.000) both   ;    
+    }
+    @-webkit-keyframes text{
+        0%{
+            letter-spacing:-.5em;opacity:0}
+        40%{opacity:.6}100%{opacity:1}
+    }
+    @keyframes text{
+        0%{letter-spacing:-.5em;opacity:0}
+        40%{opacity:.6}
+        100%{opacity:1}
+    }
+
+    .text{
+        color:white;
+        font-family: monospace;
+        font-size: 20px;
+        margin-left: 30%;
+    }
+
+    .body{
+        background:#E3E2F5;
+    }
+   
+    // ion-list{
+    //     background: #D9C8FF;
+    // }
+    ion-list-header {
+          position: relative;
+          text-align: left;
+          margin-top:3%;
+          margin-left: 0%;
+          margin-bottom: 0%;
+    }
+    ion-col{
+        height: 180px;
+        
+    }
+    .image-container{
+       background-size: cover;
+       height:140%;
+       margin-bottom: -50px;
+       margin-left:1px; 
+       margin-top: -15px;
+   }
+   .images{
+
+       background:#E3E2F5;
+       margin-top: 10px;
+
+   }
+   
+   
+   .one-image{
+       margin-top: 50px;
+       margin:2px;
+       background:#E3E2F5;
+   }
+    
+
+}
+.munn.grid{
+    margin-top: 30%;
+    position: absolute;
+    top: 70%;
+    
+    
+}
+.outline1{
+    margin-top: 30%;
+    position: absolute;
+    width: 100%;
+    top: 50%;
+   
+}
+
+.framepic{
+    margin-left:5px; 
+    width: 98%;
+    height: 60%;
+    border: 1px solid rgb(209, 212, 243);
+}
+.picturecap{
+    margin-top: 5%;
+    margin-left:3px; 
+    position: absolute;
+    width: 100%;
+    top: 1%;
+}
